@@ -107,4 +107,7 @@ export default [
   'width',
   'writingDirection',
   'zIndex',
+  'gap',
+  'rowGap',
+  'columnGap',
 ]

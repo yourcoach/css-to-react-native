@@ -134,3 +134,17 @@ it('transforms border radius', () => {
     borderBottomLeftRadius: 4,
   })
 })
+
+it('transform gaps', () => {
+  expect(transformCss([['gap', '10px']])).toEqual({
+    gap: 10,
+  })
+
+  expect(transformCss([['rowGap', '10%']])).toEqual({
+    rowGap: '10%',
+  })
+
+  expect(transformCss([['columnGap', '10rem']])).toEqual({
+    columnGap: '10rem',
+  })
+})
