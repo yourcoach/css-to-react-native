@@ -16,6 +16,16 @@ it('transforms margin logical properties', () => {
     marginEnd: 20,
   })
 
+  expect(transformCss([['margin-inline', '10px']])).toEqual({
+    marginStart: 10,
+    marginEnd: 10,
+  })
+
+  expect(transformCss([['margin-inline', '10px 0']])).toEqual({
+    marginStart: 10,
+    marginEnd: 0,
+  })
+
   expect(transformCss([['margin-inline-start', '10px']])).toEqual({
     marginStart: 10,
   })

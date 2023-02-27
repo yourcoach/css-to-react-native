@@ -23,7 +23,7 @@ const logicalFactory = ({
 
   return {
     [keyFor(0)]: first,
-    [keyFor(1)]: second,
+    [keyFor(1)]: second !== undefined ? second : first,
   }
 }
 
