@@ -1,4 +1,5 @@
 import { LENGTH, UNSUPPORTED_LENGTH_UNIT, PERCENT, SPACE } from '../tokenTypes'
+import { directionFactory } from './util'
 
 const logicalFactory = ({
   types = [LENGTH, UNSUPPORTED_LENGTH_UNIT, PERCENT],
@@ -118,6 +119,10 @@ export const borderBlockEndWidth = tokenStream => ({
   borderBottomWidth: tokenStream.expect(
     ...[LENGTH, UNSUPPORTED_LENGTH_UNIT, PERCENT]
   ),
+})
+
+export const inset = directionFactory({
+  directions: ['top', 'bottom', 'start', 'end'],
 })
 
 export const insetInline = logicalFactory({

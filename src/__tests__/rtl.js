@@ -174,8 +174,25 @@ it('transforms position logical properties', () => {
     bottom: 20,
   })
 
+  expect(transformCss([['inset-block', '10px']])).toEqual({
+    top: 10,
+    bottom: 10,
+  })
+
   expect(transformCss([['inset-inline', '10px 20px']])).toEqual({
     start: 10,
     end: 20,
+  })
+
+  expect(transformCss([['inset-inline', '20px']])).toEqual({
+    start: 20,
+    end: 20,
+  })
+
+  expect(transformCss([['inset', '20px']])).toEqual({
+    top: 20,
+    start: 20,
+    end: 20,
+    bottom: 20,
   })
 })
