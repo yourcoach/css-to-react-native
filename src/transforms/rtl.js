@@ -122,7 +122,7 @@ export const borderBlockEndWidth = tokenStream => ({
 })
 
 export const inset = directionFactory({
-  directions: ['top', 'bottom', 'start', 'end'],
+  directions: ['top', 'start', 'bottom', 'end'],
 })
 
 export const insetInline = logicalFactory({

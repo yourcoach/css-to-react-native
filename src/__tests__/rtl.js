@@ -195,4 +195,18 @@ it('transforms position logical properties', () => {
     end: 20,
     bottom: 20,
   })
+
+  expect(transformCss([['inset', '1px 2px 3px 4px']])).toEqual({
+    top: 1,
+    start: 2,
+    bottom: 3,
+    end: 4,
+  })
+
+  expect(transformCss([['inset', '1px 2px 3px']])).toEqual({
+    top: 1,
+    start: 2,
+    bottom: 3,
+    end: 2,
+  })
 })
