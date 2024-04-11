@@ -13,14 +13,21 @@ const defaultBorderWidth = 1
 const defaultBorderColor = 'black'
 const defaultBorderStyle = 'solid'
 
-export default tokenStream => {
+export default () => ({})
+
+export const borderDirectionFactory = direction => tokenStream => {
   let borderWidth
   let borderColor
   let borderStyle
+  const directionString = `border${direction}`
 
   if (tokenStream.matches(NONE)) {
     tokenStream.expectEmpty()
-    return { borderWidth: 0, borderColor: 'black', borderStyle: 'solid' }
+    return {
+      [`${directionString}Width`]: 0,
+      [`${directionString}Color`]: 'black',
+      [`${directionString}Style`]: 'solid',
+    }
   }
 
   let partsParsed = 0
@@ -49,5 +56,9 @@ export default tokenStream => {
   if (borderColor === undefined) borderColor = defaultBorderColor
   if (borderStyle === undefined) borderStyle = defaultBorderStyle
 
-  return { borderWidth, borderColor, borderStyle }
+  return {
+    [`${directionString}Width`]: borderWidth,
+    [`${directionString}Color`]: borderColor,
+    [`${directionString}Style`]: borderStyle,
+  }
 }

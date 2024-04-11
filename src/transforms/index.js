@@ -7,7 +7,7 @@ import {
   PERCENT,
   AUTO,
 } from '../tokenTypes'
-import border from './border'
+import { borderDirectionFactory } from './border'
 import boxShadow from './boxShadow'
 import flex from './flex'
 import flexFlow from './flexFlow'
@@ -24,6 +24,11 @@ import { directionFactory, parseShadowOffset } from './util'
 const background = tokenStream => ({
   backgroundColor: tokenStream.expect(COLOR),
 })
+const border = borderDirectionFactory('')
+const borderTop = borderDirectionFactory('Top')
+const borderRight = borderDirectionFactory('Right')
+const borderBottom = borderDirectionFactory('Bottom')
+const borderLeft = borderDirectionFactory('Left')
 const borderColor = directionFactory({
   types: [COLOR],
   prefix: 'border',
@@ -56,6 +61,10 @@ const textShadowOffset = tokenStream => ({
 export default {
   background,
   border,
+  borderTop,
+  borderRight,
+  borderBottom,
+  borderLeft,
   borderColor,
   borderRadius,
   borderWidth,
