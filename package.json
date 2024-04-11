@@ -14,8 +14,6 @@
     "lint-staged": "lint-staged"
   },
   "files": [
-    "index.js",
-    "index.d.ts",
     "src"
   ],
   "repository": {
