@@ -44,7 +44,7 @@ transform: translate(10px, 5px) scale(5);
 Also allows shorthand values.
 
 ```css
-font: bold 14px/16px "Helvetica";
+font: bold 14px/16px 'Helvetica';
 margin: 5px 7px 2px;
 ```
 
@@ -67,23 +67,19 @@ Shorthands will only accept values that are supported in React, so `background` 
 
 There is also support for the `box-shadow` shorthand, and this converts into `shadow-` properties. Note that these only work on iOS.
 
-#### Shorthand Notes
-
-`border{Top,Right,Bottom,Left}` shorthands are not supported, because `borderStyle` cannot be applied to individual border sides.
-
 # API
 
 The API is mostly for implementors. However, the main API may be useful for non-implementors. The main API is an array of `[property, value]` tuples.
 
 ```js
-import transform from 'css-to-react-native';
+import transform from 'css-to-react-native'
 // or const transform = require('css-to-react-native').default;
 
 transform([
   ['font', 'bold 14px/16px "Helvetica"'],
   ['margin', '5px 7px 2px'],
   ['border-left-width', '5px'],
-]); // => { fontFamily: 'Helvetica', ... }
+]) // => { fontFamily: 'Helvetica', ... }
 ```
 
 We don't provide a way to get these style tuples in this library, so you'll need to do that yourself. I expect most people will use postCSS or another CSS parser. You should try avoid getting these with `string.split`, as that has a lot of edge cases (colons and semi-colons appearing in comments etc.)
@@ -93,16 +89,16 @@ For implementors, there is also a few extra APIs available.
 These are for specific use-cases, and most people should just be using the API above.
 
 ```js
-import { getPropertyName, getStylesForProperty } from 'css-to-react-native';
+import { getPropertyName, getStylesForProperty } from 'css-to-react-native'
 
-getPropertyName('border-width'); // => 'borderWidth'
-getStylesForProperty('borderWidth', '1px 0px 2px 0px'); // => { borderTopWidth: 1, ... }
+getPropertyName('border-width') // => 'borderWidth'
+getStylesForProperty('borderWidth', '1px 0px 2px 0px') // => { borderTopWidth: 1, ... }
 ```
 
 Should you wish to opt-out of transforming certain shorthands, an array of property names in camelCase can be passed as a second argument to `transform`.
 
 ```js
-transform([['border-radius', '50px']], ['borderRadius']);
+transform([['border-radius', '50px']], ['borderRadius'])
 // { borderRadius: 50 } rather than { borderTopLeft: ... }
 ```
 
