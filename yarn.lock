@@ -899,18 +899,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/types@npm:^7.0.0, @babel/types@npm:^7.2.0, @babel/types@npm:^7.3.0, @babel/types@npm:^7.4.0, @babel/types@npm:^7.4.4, @babel/types@npm:^7.5.5, @babel/types@npm:^7.6.0":
-  version: 7.6.1
-  resolution: "@babel/types@npm:7.6.1"
-  dependencies:
-    esutils: "npm:^2.0.2"
-    lodash: "npm:^4.17.13"
-    to-fast-properties: "npm:^2.0.0"
-  checksum: 10c0/7db160fa23d83bee902b184b30cb50a6ea7d1bb1b8594a965b5f2df72c6e2a26dc3d737235c37eb6a07a66faa48464bf4549563a0c793b2572fdc4da36a524b3
-  languageName: node
-  linkType: hard
-
-"@babel/types@npm:^7.8.3":
+"@babel/types@npm:^7.0.0, @babel/types@npm:^7.2.0, @babel/types@npm:^7.3.0, @babel/types@npm:^7.4.0, @babel/types@npm:^7.4.4, @babel/types@npm:^7.5.5, @babel/types@npm:^7.6.0, @babel/types@npm:^7.8.3":
   version: 7.24.0
   resolution: "@babel/types@npm:7.24.0"
   dependencies:
@@ -2337,7 +2326,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:4, debug@npm:^4.3.4":
+"debug@npm:4, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.4":
   version: 4.3.4
   resolution: "debug@npm:4.3.4"
   dependencies:
@@ -2364,15 +2353,6 @@ __metadata:
   dependencies:
     ms: "npm:^2.1.1"
   checksum: 10c0/406ae034424c5570c83bb7f7baf6a2321ace5b94d6f0032ec796c686e277a55bbb575712bb9e6f204e044b1a8c31981ba97fab725a09fcdc7f85cd89daf4de30
-  languageName: node
-  linkType: hard
-
-"debug@npm:^4.1.0, debug@npm:^4.1.1":
-  version: 4.1.1
-  resolution: "debug@npm:4.1.1"
-  dependencies:
-    ms: "npm:^2.1.1"
-  checksum: 10c0/399e98c779ba4e71537497f10caf6390646b69330ff8a455427acce04f1ce8d8cd018e1804fdcca772177666fdcd888dd3672bb8f9986c1d785a6c2b9805f370
   languageName: node
   linkType: hard
 
@@ -3384,14 +3364,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graceful-fs@npm:^4.1.11, graceful-fs@npm:^4.1.15, graceful-fs@npm:^4.1.2":
-  version: 4.2.2
-  resolution: "graceful-fs@npm:4.2.2"
-  checksum: 10c0/a438a7a9a8369d2f4fb3eb467b742fe68fc5434eab559bd17d7b7f778eda83860512d2007555d0a0d8b2d4c59ca949ba15964f1a1e3a8b6b66c992378deda3ab
-  languageName: node
-  linkType: hard
-
-"graceful-fs@npm:^4.2.6":
+"graceful-fs@npm:^4.1.11, graceful-fs@npm:^4.1.15, graceful-fs@npm:^4.1.2, graceful-fs@npm:^4.2.6":
   version: 4.2.11
   resolution: "graceful-fs@npm:4.2.11"
   checksum: 10c0/386d011a553e02bc594ac2ca0bd6d9e4c22d7fa8cfbfc448a6d148c59ea881b092db9dbe3547ae4b88e55f1b01f7c4a2ecc53b310c042793e63aa44cf6c257f2
@@ -5223,17 +5196,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minipass@npm:^2.6.0, minipass@npm:^2.8.6":
-  version: 2.8.6
-  resolution: "minipass@npm:2.8.6"
-  dependencies:
-    safe-buffer: "npm:^5.1.2"
-    yallist: "npm:^3.0.0"
-  checksum: 10c0/72a01bca5ae619749a59b7093986bbb73db5c9632b283d9aff7e01e3ff3df760493aae8a40ecc46e7d7c2d67efaca671fee06a575924a3093980de1ac8ae1f93
-  languageName: node
-  linkType: hard
-
-"minipass@npm:^2.9.0":
+"minipass@npm:^2.6.0, minipass@npm:^2.8.6, minipass@npm:^2.9.0":
   version: 2.9.0
   resolution: "minipass@npm:2.9.0"
   dependencies:
