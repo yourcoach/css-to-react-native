@@ -147,4 +147,9 @@ it('transform gaps', () => {
   expect(transformCss([['columnGap', '10rem']])).toEqual({
     columnGap: '10rem',
   })
+
+  expect(transformCss([['gap', '10px 20px']])).toEqual({
+    rowGap: 10,
+    columnGap: 20,
+  })
 })

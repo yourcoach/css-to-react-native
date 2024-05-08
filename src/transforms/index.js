@@ -20,6 +20,7 @@ import textDecorationLine from './textDecorationLine'
 import textShadow from './textShadow'
 import transform from './transform'
 import * as rtl from './rtl'
+import { gap } from './gap'
 import { directionFactory, parseShadowOffset } from './util'
 
 const background = tokenStream => ({
@@ -84,5 +85,6 @@ export default {
   textDecoration,
   textDecorationLine,
   transform,
+  gap,
   ...rtl,
 }
