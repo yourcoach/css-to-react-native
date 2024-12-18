@@ -14,6 +14,7 @@ import flexFlow from './flexFlow'
 import font from './font'
 import fontFamily from './fontFamily'
 import fontVariant from './fontVariant'
+import fontSize from './fontSize'
 import placeContent from './placeContent'
 import textDecoration from './textDecoration'
 import textDecorationLine from './textDecorationLine'
@@ -76,6 +77,7 @@ export default {
   fontFamily,
   fontVariant,
   fontWeight,
+  fontSize,
   margin,
   padding,
   placeContent,
